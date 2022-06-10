@@ -1,0 +1,16 @@
+.score {
+    text-align: left;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.table {
+    border: 1px solid black;
+    border-style: outset;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button {
+    margin-top: 10px;
+}
