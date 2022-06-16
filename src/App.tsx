@@ -12,145 +12,110 @@ import Image from "./components/Image/Image";
 import Player2Image from "./components/Player2Image";
 import Score from "./components/Score/Score";
 
+//Types
+export type PlayerChoiceType = 'rock' | 'scissors' | 'paper' | '';
+export type WinnerType = 'Draw!' | 'Player 1 won!' | 'Player 2 won!' | 'Choose your weapon!';
+export type ImgIdType = 0 | 1 | 2 | 3;
+
+export type ImgType = {
+    id: ImgIdType;
+    name: PlayerChoiceType;
+    src: string
+}
+
+//Const and let
 export const scissors = 'scissors';
 export const rock = 'rock';
 export const paper = 'paper';
 export const DRAW: WinnerType = 'Draw!';
 export const PLAYER1WIN: WinnerType = 'Player 1 won!';
 export const PLAYER2WIN: WinnerType = 'Player 2 won!';
-const arrOfWeapons = [scissors, rock, paper];
+const arrOfWeapons: Array<PlayerChoiceType> = [scissors, rock, paper];
 
-// export type PlayerChoiceType = 'rock' | 'scissors' | 'paper' | '';
-// export type WinnerType = 'Draw!' | 'Player 1 won!' | 'Player 2 won!' | 'Choose your weapon!';
-export type WinnerType = string;
-export type PlayerChoiceType = string;
-// export type ScoreType = {
-//     score: number;
-//     // p2Score: number
-// }
-
-// export type PlayerType = {
-//     playerName: "Player 1" | "Player 2";
-//     weapon: string;
-//     score: number
-// }
-
-//
-const players = [
-    // player1:
-    {
-        id: 1,
-        // playerName: "Player 1", weapon: '',
-        score: 0
-    },
-    // player2:
-    {
-        id: 2,
-        // playerName: "Player 2", weapon: '',
-        score: 0
-    }
-]
-// }
-
-export type PlayerType = {
-    id: number,
-    // playerName: string;
-    // weapon: string;
-    score: number
-}
-
-// export type PlayersType = {
-//     player1: PlayerType;
-//     player2: PlayersType
-// }
-export type ImgType = {
-    id: number;
-    name: string;
-    src: string
-}
-
-export type SelectedImgType = 0 | 1 | 2 | 3
-
-const imgState = [
-    {id: 1, name: rock,  src: rockImg },
-    {id: 2, name: paper,  src: paperImg },
-    {id: 3, name: scissors,  src: scissorsImg }
+const imgState: Array<ImgType> = [
+    {id: 1, name: rock, src: rockImg},
+    {id: 2, name: paper, src: paperImg},
+    {id: 3, name: scissors, src: scissorsImg}
 ];
+
+let scoreP2Updated: number = 0;
+let scoreP1Updated: number = 0;
+
 
 const App: React.FC = () => {
 
-    // const [imgState, setImgState] = useState<Array<ImgType>>( [
-    //     {id: 1, name: rock,  src: rockImg },
-    //     {id: 2, name: paper,  src: paperImg },
-    //     {id: 3, name: scissors,  src: scissorsImg }
-    // ];);
+    let initScore = 0;
+
+    //useStates
     const [winner, setWinner] = useState<WinnerType>('Choose your weapon!');
-    const [p2, setP2Weapon] = useState<PlayerChoiceType>('');
-    const [p1, setP1Weapon] = useState<PlayerChoiceType>('');
-    const [selectedImg, setSelectedImg] = useState<SelectedImgType> (0);
-    //@ts-ignore
+    const [player2, setP2Weapon] = useState<PlayerChoiceType>('');
+    const [player1, setP1Weapon] = useState<PlayerChoiceType>('');
+    const [selectedImg, setSelectedImg] = useState<ImgIdType>(0);
+    const [scoreP1, setScoreP1] = useState(initScore);
+    const [scoreP2, setScoreP2] = useState(initScore);
 
-    // const [score, setScore] = useState<PlayersType>(players)
+    //callbacks
+    const onClickClearScore = () => {
+        setP1Weapon('');
+        setP2Weapon('');
+        setWinner('Choose your weapon!');
+        setSelectedImg(0);
+        scoreP2Updated = 0;
+        scoreP1Updated = 0;
+        setScoreP1(scoreP1Updated);
+        setScoreP2(scoreP2Updated);
+    }
 
-
-    const onImageClickHandler = (p1: PlayerChoiceType, p1Id: SelectedImgType) => {
+    const onImageClickHandler = (player1: PlayerChoiceType, player1Id: ImgIdType) => {
         let p2Choice: PlayerChoiceType = arrOfWeapons[Math.floor(Math.random() * 3)];
-        setP1Weapon(p1);
-        setSelectedImg(p1Id);
+        setP1Weapon(player1);
+        setSelectedImg(player1Id);
         setP2Weapon(p2Choice);
         setWinner(result);
-        //@ts-ignore
-
-        //     result === PLAYER1WIN ? setScore([...players, players.player1.score : score += 1
-        // ]) :
-        //
-        //     result === PLAYER2WIN ? setScore([...players, players.player2.score : score += 1
-        // ])
+        setScoreP1(scoreP1Updated);
+        setScoreP2(scoreP2Updated);
     }
 
-    const onClickClearScore = () => {
-        // let clearedScore = players.map(p => p.score = 0)
-        // setScore([{...players, score: 0 }])
-        //  console.log("you want to clear score!")
-    }
-
+    //logic
     let result: WinnerType = 'Choose your weapon!';
-    if (p1 === p2 && p2) {
+    if (player1 === player2 && player2) {
         result = DRAW
-    } else if (p1 === scissors) {
-        p2 === rock ? result = PLAYER2WIN : result = PLAYER1WIN
-    } else if (p1 === rock) {
-        p2 === paper ? result = PLAYER2WIN : result = PLAYER1WIN
-    } else if (p1 === paper) {
-        p2 === scissors ? result = PLAYER2WIN : result = PLAYER1WIN
+    } else if (player1 === scissors) {
+        player2 === rock ? result = PLAYER2WIN : result = PLAYER1WIN
+    } else if (player1 === rock) {
+        player2 === paper ? result = PLAYER2WIN : result = PLAYER1WIN
+    } else if (player1 === paper) {
+        player2 === scissors ? result = PLAYER2WIN : result = PLAYER1WIN
     }
 
-    // let scoreChange = 0;
-    // result === PLAYER2WIN  ? scoreChange
+    switch (result) {
+        case "Player 1 won!":
+            scoreP1Updated = scoreP1 + 1;
+            break;
+        case "Player 2 won!":
+            scoreP2Updated = scoreP2 + 1;
+            break;
+    }
 
-    let srcPlayer2 = !p2 ? questionImg : p2 === rock ? rockBlueImg : p2 === scissors ? scissorsBlueImg : paperBlueImg;
+    let srcPlayer2 = !player2 ? questionImg : player2 === rock ? rockBlueImg : player2 === scissors ? scissorsBlueImg : paperBlueImg;
+
     let imgPlayer1 = imgState.map(i => {
-        return(
-            <Image src={i.src} name={i.name} onImageClickHandler={onImageClickHandler}
-                   id={i.id} selectedImg={selectedImg}
+        return (
+            <Image
+                src={i.src} name={i.name}
+                onImageClickHandler={onImageClickHandler}
+                id={i.id} selectedImg={selectedImg}
             />
         )
     })
 
+    //JSX
     return (
         <div className='App'>
-            <div className='app-wrapper'>
-                <div className='app-wrapper-score'>
-                    <Score players={players} clearScore={onClickClearScore}/>
-                </div>
-                <div className='app-wrapper-header'>
-                    <Header result={result}/>
-                </div>
-            </div>
-            <div>
-                {imgPlayer1}
-            </div>
-            <Player2Image src={srcPlayer2} name={p2}/>
+            <Score scoreP1={scoreP1Updated} scoreP2={scoreP2Updated} clearScore={onClickClearScore}/>
+            <Header result={result}/>
+            {imgPlayer1}
+            <Player2Image src={srcPlayer2} name={player2} id={0}/>
         </div>
     )
 }

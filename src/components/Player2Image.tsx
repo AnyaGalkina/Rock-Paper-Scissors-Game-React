@@ -1,16 +1,17 @@
 import React from 'react';
 import Image from "./Image/Image";
-import {PlayerChoiceType} from "../App";
+import {PlayerChoiceType, ImgIdType} from "../App";
 
 type PropsType = {
     name: PlayerChoiceType;
     src: string;
+    id: ImgIdType;
 }
 
-const Player2Image = (props: PropsType) => {
+const Player2Image: React.FC<PropsType> = (props) => {
     return (
         <div>
-            <Image name={props.name} src={props.src}/>
+            <Image name={props.name} src={props.src} id={props.id}/>
         </div>
     );
 };

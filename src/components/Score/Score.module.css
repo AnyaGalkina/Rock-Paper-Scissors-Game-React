@@ -1,16 +1,26 @@
 .score {
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     margin: 10px;
 }
 
 .table {
+    margin: 20px 0px 0px 10px;
+    font-size: 20px;
     border: 1px solid black;
     border-style: outset;
     text-align: center;
-    font-size: 16px;
+    background-color: #eaedcf;
 }
 
 .button {
-    margin-top: 10px;
+    text-align: center;
+    margin: 10px 0px 0px 30px;
+    background-color: slategrey;
+    color: white;
+    font-size: 16px;
+}
+
+.player {
+    font-size: 14px;
 }

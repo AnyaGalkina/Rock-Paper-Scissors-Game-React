@@ -1,30 +1,35 @@
 import React from 'react';
-import {PlayerType} from "../../App";
 import styles from "./Score.module.css";
 
 type PropsType = {
-    players: Array<PlayerType>;
+    scoreP1: number;
+    scoreP2: number;
     clearScore: () => void
 }
-const Score = (props: PropsType) => {
+const Score: React.FC<PropsType> = ({scoreP2, scoreP1, clearScore}) => {
 
-    const scoreTable = props.players.map((p, index) =>{
-        return (
-            <tr key={index} >
-                {/*<td  className={styles.table}>{p.playerName}</td>*/}
-                <td  className={styles.table}>{p.score}</td>
-            </tr>)})
+    let onClickHandle = () => {
+        clearScore();
+    }
 
     return (
         <div className={styles.score}>
-            <h3>Score</h3>
+
             <table className={styles.table}>
-                {scoreTable}
+                <td className={styles.table}>
+                    <th className={styles.player}>player 1</th>
+                    <tr>{scoreP1}</tr>
+                </td>
+                <td className={styles.table}>
+                    <th className={styles.player}>player 2</th>
+                    <tr>{scoreP2}</tr>
+                </td>
             </table>
-            <button
-                onClick={()=>{props.clearScore()}}
-                className={styles.button}
-            >Clear score</button>
+
+            <button onClick={onClickHandle}
+                    className={styles.button}
+            >clear score</button>
+
         </div>
     );
 };

@@ -6,13 +6,14 @@ type PropsType = {
     result: WinnerType;
 }
 
-const Header = (props: PropsType) => {
+const Header: React.FC<PropsType> = ({result}) => {
+
+    let headerStyle = result === PLAYER2WIN ? styles.looser :
+        result === PLAYER1WIN ? styles.winner : '';
+
     return (
-        <div className={styles.grid}>
-            <h2
-                className={props.result === PLAYER2WIN ? styles.looser :
-                    props.result === PLAYER1WIN ? styles.winner : undefined}
-            >{props.result}</h2>
+        <div>
+            <h2 className={headerStyle}>{result}</h2>
         </div>
     );
 };
