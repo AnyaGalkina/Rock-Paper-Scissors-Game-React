@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/css/main.dc53abeb.css",
-    "main.js": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/main.8287a6b5.js",
+    "main.css": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/css/main.ef68732b.css",
+    "main.js": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/main.676880bb.js",
     "static/js/787.c8ffd4a8.chunk.js": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/787.c8ffd4a8.chunk.js",
     "static/media/question.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/question.4087f2d17ff639778199.jpg",
     "static/media/scissors-blue.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/scissors-blue.2f146ccce19776eabe68.jpg",
-    "static/media/404-error.webp": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/404-error.2a806cab7365aea998ac.webp",
     "static/media/rock-blue.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/rock-blue.63f13c7e79c8b4b63b8c.jpg",
     "static/media/paper-blue.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/paper-blue.0de6d2bd6c8a9b0649b9.jpg",
     "static/media/scissors.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/scissors.8254e5f23daa864680d0.jpg",
     "static/media/rock.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/rock.b3a8f55c043c6acf76be.jpg",
     "static/media/paper.jpg": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/media/paper.830c61cc89ff40b8381a.jpg",
     "index.html": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/index.html",
-    "main.dc53abeb.css.map": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/css/main.dc53abeb.css.map",
-    "main.8287a6b5.js.map": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/main.8287a6b5.js.map",
+    "main.ef68732b.css.map": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/css/main.ef68732b.css.map",
+    "main.676880bb.js.map": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/main.676880bb.js.map",
     "787.c8ffd4a8.chunk.js.map": "/AnyaGalkina.github.io/Rock-Paper-Scissors-Game-React/static/js/787.c8ffd4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc53abeb.css",
-    "static/js/main.8287a6b5.js"
+    "static/css/main.ef68732b.css",
+    "static/js/main.676880bb.js"
   ]
 }
