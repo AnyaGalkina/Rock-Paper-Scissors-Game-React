@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/css/main.ef68732b.css",
-    "main.js": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/main.1479ee79.js",
+    "main.js": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/main.f2a833b8.js",
     "static/js/787.c8ffd4a8.chunk.js": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/787.c8ffd4a8.chunk.js",
     "static/media/question.jpg": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/media/question.4087f2d17ff639778199.jpg",
     "static/media/scissors-blue.jpg": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/media/scissors-blue.2f146ccce19776eabe68.jpg",
@@ -12,11 +12,11 @@
     "static/media/paper.jpg": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/media/paper.830c61cc89ff40b8381a.jpg",
     "index.html": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/index.html",
     "main.ef68732b.css.map": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/css/main.ef68732b.css.map",
-    "main.1479ee79.js.map": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/main.1479ee79.js.map",
+    "main.f2a833b8.js.map": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/main.f2a833b8.js.map",
     "787.c8ffd4a8.chunk.js.map": "/AnyaGalkina.github.io/rock-paper-scissors-game-react/static/js/787.c8ffd4a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef68732b.css",
-    "static/js/main.1479ee79.js"
+    "static/js/main.f2a833b8.js"
   ]
 }
