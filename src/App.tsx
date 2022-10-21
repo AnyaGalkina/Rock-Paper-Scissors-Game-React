@@ -14,7 +14,7 @@ import Score from "./components/Score/Score";
 
 //Types
 export type PlayerChoiceType = 'rock' | 'scissors' | 'paper' | '';
-export type WinnerType = 'Draw!' | 'Player 1 won!' | 'Player 2 won!' | 'Choose your weapon!';
+export type WinnerType = 'Draw!' | 'You win!' | 'You lose!' | 'Choose your weapon!';
 export type ImgIdType = 0 | 1 | 2 | 3;
 
 export type ImgType = {
@@ -28,8 +28,8 @@ export const scissors = 'scissors';
 export const rock = 'rock';
 export const paper = 'paper';
 export const DRAW: WinnerType = 'Draw!';
-export const PLAYER1WIN: WinnerType = 'Player 1 won!';
-export const PLAYER2WIN: WinnerType = 'Player 2 won!';
+export const PLAYER1WIN: WinnerType = 'You win!';
+export const PLAYER2WIN: WinnerType = 'You lose!';
 const arrOfWeapons: Array<PlayerChoiceType> = [scissors, rock, paper];
 
 const imgState: Array<ImgType> = [
@@ -89,10 +89,10 @@ const App: React.FC = () => {
     }
 
     switch (result) {
-        case "Player 1 won!":
+        case "You win!":
             scoreP1Updated = scoreP1 + 1;
             break;
-        case "Player 2 won!":
+        case "You lose!":
             scoreP2Updated = scoreP2 + 1;
             break;
     }

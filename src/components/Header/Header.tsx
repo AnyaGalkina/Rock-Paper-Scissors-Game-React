@@ -13,7 +13,7 @@ const Header: React.FC<PropsType> = ({result}) => {
 
     return (
         <div>
-            <h2 className={headerStyle}>{result}</h2>
+            <h2 style={{margin: 0}} className={headerStyle}>{result}</h2>
         </div>
     );
 };

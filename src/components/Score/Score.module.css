@@ -1,26 +1,26 @@
 .score {
     text-align: left;
     font-size: 20px;
-    margin: 10px;
+    padding: 10px 0 0 30px;
 }
 
-.table {
-    margin: 20px 0px 0px 10px;
-    font-size: 20px;
-    border: 1px solid black;
-    border-style: outset;
-    text-align: center;
-    background-color: #eaedcf;
-}
+/*.table {*/
+/*    margin: 20px 0px 0px 10px;*/
+/*    font-size: 20px;*/
+/*    border: 1px solid black;*/
+/*    border-style: outset;*/
+/*    text-align: center;*/
+/*    background-color: #eaedcf;*/
+/*}*/
 
-.button {
-    text-align: center;
-    margin: 10px 0px 0px 30px;
-    background-color: slategrey;
-    color: white;
-    font-size: 16px;
-}
+/*.button {*/
+/*    text-align: center;*/
+/*    margin: 10px 0px 0px 30px;*/
+/*    background-color: slategrey;*/
+/*    color: white;*/
+/*    font-size: 16px;*/
+/*}*/
 
-.player {
-    font-size: 14px;
-}
+/*.player {*/
+/*    font-size: 14px;*/
+/*}*/
