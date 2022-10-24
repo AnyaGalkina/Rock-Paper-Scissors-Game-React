@@ -15,21 +15,8 @@ const Score: React.FC<PropsType> = ({scoreP2, scoreP1, clearScore}) => {
 
     return (
         <div className={styles.score}>
-            {/*<table className={styles.table}>*/}
-            {/*    <td className={styles.table}>*/}
-            {/*        <th className={styles.player}>player 1</th>*/}
-            {/*        <tr>{scoreP1}</tr>*/}
-            {/*    </td>*/}
-            {/*    <td className={styles.table}>*/}
-            {/*        <th className={styles.player}>player 2</th>*/}
-            {/*        <tr>{scoreP2}</tr>*/}
-            {/*    </td>*/}
-            {/*</table>*/}
 
-            <TableContainer component={Paper} sx={{ width: 220,
-                // backgroundColor: "#d4b31d", opacity: "80%"
-                // border: "2px solid #d4b31d"
-            }}>
+            <TableContainer component={Paper} sx={{ width: 220}}>
                 <Table>
                     <TableHead>
                         <TableRow >
